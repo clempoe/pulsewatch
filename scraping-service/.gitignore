@@ -1,0 +1,17 @@
+# Dossier node_modules (contient les dépendances installées)
+node_modules/
+
+# Fichiers de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cache Puppeteer (fichiers téléchargés comme Chrome)
+.puppeteer/
+
+# Fichier de configuration environnementale
+.env
+
+# Fichiers générés par le système d'exploitation
+.DS_Store
+Thumbs.db

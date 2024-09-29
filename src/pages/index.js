@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function Home() {
-  const [url, setUrl] = useState('');
+  const [keywords, setKeywords] = useState('');
   const [data, setData] = useState(null);
   const [simple, setSimple] = useState(false);
 
@@ -11,7 +11,7 @@ export default function Home() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ url, simple }),
+      body: JSON.stringify({ keywords, simple }),
     });
 
     const result = await response.json();
@@ -24,9 +24,9 @@ export default function Home() {
       <div className="w-full max-w-md flex flex-col space-y-4">
         <input
           type="text"
-          value={url}
-          onChange={(e) => setUrl(e.target.value)}
-          placeholder="Entrez l'URL à scraper"
+          value={keywords}
+          onChange={(e) => setKeywords(e.target.value)}
+          placeholder="Entrez les mots-clés à surveiller"
           className="w-full p-3 rounded-lg border border-gray-500 bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <label className="flex items-center space-x-2">
